@@ -20,7 +20,6 @@ def calTotal(s):
         # '-' equals to 0, no need to add
         if s[i] == '-':
             half += 1
-            continue
         # other marks
         else:
             if s[i].upper() == 'X':
@@ -32,9 +31,10 @@ def calTotal(s):
             elif s[i] == '/':
                 score += 10 - dic[s[i-1]] + dic[s[i+1]]
                 half += 1
-            if half == 2:
-                half = 0
-                frame += 1
+        # count frames
+        if half == 2:
+            half = 0
+            frame += 1
 
     return score
 
