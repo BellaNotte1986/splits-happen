@@ -6,8 +6,14 @@ ref: https://www.rookieroad.com/bowling/scoring-rules/
 # store the basic score of the single mark
 dic = {'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'X':10,'-':0}
 
-# calculate through the input string
+
 def calTotal(s):
+    '''
+    Calculate the total score of a complete bowling game based on result of a string
+    :param: s
+    :type: str
+    :rtype: int
+    '''
     score = 0
     # count the frame of the scores, two half equal to one frame
     # X mark take a whole frame, while others take a half
@@ -39,8 +45,13 @@ def calTotal(s):
     return score
 
 
-# calculate single X mark, adding following two marks' score
 def calXScore(next1,next2):
+    '''
+    Calculate score related to a single X mark
+    :param: next1, next2
+    :type: str, str
+    :rtype: int
+    '''
     temp = 0
     temp += dic[next1]
     if next2 == '/':
@@ -52,6 +63,9 @@ def calXScore(next1,next2):
 
 # main body of the program 
 def calScore():
+    '''
+    Get input string represeting scores from users, and calculate scores
+    '''
     strScore = input("Enter a result of game ('q' to exit): ")
     while strScore != 'q':
         ans = calTotal(strScore)
@@ -59,6 +73,8 @@ def calScore():
         strScore = input("Enter a result of game ('q' to exit): ")
     print("end")
 
-calScore()
+# calScore()
+if __name__ == '__main__':
+    calScore()
 
 

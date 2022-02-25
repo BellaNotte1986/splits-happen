@@ -1,5 +1,38 @@
 # Design and Development Challenge – Bowling Score
 
+## Installation and Usage
+
+### Installation
+
+Create a new directory and pull this repo to that directory. Install the required packages. 
+
+```
+mkdir -p ~/bowling_score_challenge
+cd ~/bowling_score_challenge
+git init
+git pull https://github.com/kagaminearia/splits-happen.git
+pip3 install pytest
+```
+
+### Usage
+
+__User Inputs__
+
+This program allows users to directly enter a string as input and generates the score from the string. The program stops when the user enters `q` as command.
+
+```
+python3 main.py
+```
+
+__Unit Testing__
+
+A unit testing file is provided to test the functionalities of the main program.
+
+```
+pytest test.py
+```
+
+
 ## Requirement
 Create a program which, given a valid sequence of rolls for one line of American Ten-Pin Bowling, produces the total score for the game. Fork this repository, build your program in Python, then submit a pull request with your code.
 
