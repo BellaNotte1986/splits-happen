@@ -36,6 +36,7 @@ def ScoreCalc(seq):
     return score
 
 def StartScoring(seq):
+    """Starts Program"""
     while seq != 'q':
         print(f"Your score is {ScoreCalc(seq)}")
         seq = input("Enter your bowling score ( q to quit ): ")
